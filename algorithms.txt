@@ -1,0 +1,17 @@
+Q-learning
+Sarsa - State–action–reward–state–action
+Expected SARSA
+DQN - Deep Q-learning
+Reinforce - Reinforcement Learning
+PPO - Proximal Policy Optimization
+DDPG - Deep Deterministic Policy Gradient
+MADDPG - Multi-Agent Deep Deterministic Policy Gradient
+A2C - Actor-Critic
+TRPO - Trust Region Policy Optimization
+A3C - Asynchronous Advantage Actor-Critic
+Rainbow - Deep Reinforcement Learning on Graphical Models
+Double Deep Q-learning
+Dueling DQN
+Prioritized Experience Replay DQN  
+SAC - Soft Actor-Critic
+TD3 - Twin Delayed Deep Deterministic Policy Gradient

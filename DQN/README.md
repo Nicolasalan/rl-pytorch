@@ -26,7 +26,7 @@ When collecting a yellow banana the agent receives a reward of `+1` and when col
 1. Clone this repository to your local machine using `git clone` .
 
 ```
-git clone https://github.com/Nicolasalan/Agent-dqn.git
+https://github.com/Nicolasalan/Deep-Reinforcement-Learning-pytorch.git
 ```
 
 2. Download the environment from one of the links below. You just need to select the environment that matches your operating system:

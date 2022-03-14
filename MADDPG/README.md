@@ -16,7 +16,7 @@ The environment rewards are, if an agent hits the ball over the net, he gets a r
 1. Clone this repository to your local machine using `git clone` .
 
 ```
-git clone https://github.com/Nicolasalan/Multi-Agent-rl.git
+https://github.com/Nicolasalan/Deep-Reinforcement-Learning-pytorch.git
 ```
 
 2. Download the environment that matches your operating system:

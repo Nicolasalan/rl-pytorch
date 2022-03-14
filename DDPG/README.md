@@ -16,7 +16,7 @@ In this environment, a double-hinged arm can move to target locations. A +0.1 re
 1. Clone this repository to your local machine using `git clone` .
 
 ```
-git clone https://github.com/Nicolasalan/Continuos-Control-rl.git
+https://github.com/Nicolasalan/Deep-Reinforcement-Learning-pytorch.git
 ```
 
 2. Download the Unity ML environment from one of the links below based on your operating system:

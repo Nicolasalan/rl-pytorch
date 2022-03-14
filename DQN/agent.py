@@ -78,6 +78,7 @@ class Agent():
 
      def learn(self, experiences, gamma):
           """Update the value parameters using given batch of experiment tuples.
+
           parameters
           ======
                experiments (Tupla[torch.Variable]): tuple of (s, a, r, s', done) tuples
@@ -113,6 +114,7 @@ class Agent():
      def soft_update(self, local_model, target_model, tau):
           """Soft update model parameters.
           θ_target = τ*θ_local + (1 - τ)*θ_target
+
           parameters
           ======
                local_model (PyTorch model): weights will be copied from

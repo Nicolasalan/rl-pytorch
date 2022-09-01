@@ -2,6 +2,8 @@
 
 Training of 2 agents that control the rackets to hit a ball over a net, using Multi-Agent Deep Deterministic Policy Gradients (MADDPG) learning.
 
+![](https://user-images.githubusercontent.com/10624937/42135623-e770e354-7d12-11e8-998d-29fc74429ca2.gif)
+
 ## Environment
 The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
 

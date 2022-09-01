@@ -2,6 +2,8 @@
 
 Training of 20 simultaneous agents, using Deep Deterministic Policy Gradients (DDPG).
 
+![](https://user-images.githubusercontent.com/10624937/43851024-320ba930-9aff-11e8-8493-ee547c6af349.gif)
+
 ## Environment
 The observation consists of 33 variables of rotation, velocity and arm angular velocities. Each action is a vector with four numbers, corresponding to the torque applicable to two joints. Each entry in the action vector must be a number between -1 and 1.
 

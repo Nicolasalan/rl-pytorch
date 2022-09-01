@@ -1,6 +1,11 @@
 # Collector agent
 
 Training of an intelligent agent that navigates an environment, aiming to collect yellow bananas and avoid blue ones.
+
+<p align="center">
+![banana](https://user-images.githubusercontent.com/43606874/50734578-31458000-11b2-11e9-8cbc-fcdd84d17277.gif)
+</p>
+
 ## Environment
 
 The environment used is episodic, that is, it contains a beginning and an end. State spaces have 37 dimensions and contain an interaction speed. The agent has 4 discrete actions for interaction, each time slot, it has to select these actions to maximize the reward, corresponding to:

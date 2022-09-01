@@ -1,10 +1,8 @@
 # Collector agent
 
 Training of an intelligent agent that navigates an environment, aiming to collect yellow bananas and avoid blue ones.
-
-<p align="center">
-![banana](https://user-images.githubusercontent.com/43606874/50734578-31458000-11b2-11e9-8cbc-fcdd84d17277.gif)
-</p>
+    
+![](https://user-images.githubusercontent.com/43606874/50734578-31458000-11b2-11e9-8cbc-fcdd84d17277.gif)
 
 ## Environment
 

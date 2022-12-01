@@ -3,23 +3,23 @@ import random
 import copy
 
 class OUNoise:
-     """Ornstein-Uhlenbeck process."""
+     """Processo Ornstein-Uhlenbeck."""
 
      def __init__(self, size, seed, mu=0., theta=0.15, sigma=0.2):
-          """Initialize parameters and noise process."""
-          self.mu = mu * np.ones(size)
-          self.theta = theta
-          self.sigma = sigma
-          self.seed = random.seed(seed)
-          self.reset()
+          """Inicializar parâmetros e processo de ruído."""
+          self.mu = mu * np.ones(size) # adicionar ruído
+          self.theta = theta # taxa de decaimento 
+          self.sigma = sigma # taxa de variação
+          self.seed = random.seed(seed) # semente aleatória
+          self.reset() # redefinir o estado interno
 
      def reset(self):
-          """Reset the internal state (= noise) to mean (mu)."""
-          self.state = copy.copy(self.mu)
+          """Redefinir o estado interno (= ruído) para significar (mu)."""
+          self.state = copy.copy(self.mu) # copiar o ruído
 
      def sample(self):
-          """Update internal state and return it as a noise sample."""
-          x = self.state
-          dx = self.theta * (self.mu - x) + self.sigma * np.array([random.random() for i in range(len(x))])
-          self.state = x + dx
-          return self.state
+          """Atualizar o estado interno e retorná-lo como uma amostra de ruído."""
+          x = self.state # estado interno
+          dx = self.theta * (self.mu - x) + self.sigma * np.array([random.random() for i in range(len(x))]) # atualizar o estado interno 
+          self.state = x + dx # atualizar o estado interno 
+          return self.state # retornar o estado interno

@@ -3,26 +3,26 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class QNetwork(nn.Module):
-    """Actor Model (Policy)"""
+    """Modelo de Ator (Política)"""
 
     def __init__(self, state_size, action_size, seed, fc1_units=128, fc2_units=32):
-            """Initialize the parameters and build the model.
-            parameters
-            ======
-                  state_size: size of state space.
-                  action_size: action space size.
-                  seed (int): random seed
-                  fc1_units (int): Number of nodes in the first hidden layer
-                  fc2_units (int): Number of nodes in the second hidden layer
-            """
-            super(QNetwork, self).__init__()
-            self.seed = torch.manual_seed(seed)
-            self.fc1 = nn.Linear(state_size, fc1_units)
-            self.fc2 = nn.Linear(fc1_units, fc2_units)
-            self.fc3 = nn.Linear(fc2_units, action_size)
+                """Inicializar os parâmetros e construir o modelo.
+                 parâmetros
+                 ======
+                         state_size: tamanho do espaço de estado.
+                         action_size: tamanho do espaço de ação.
+                         semente (int): semente aleatória
+                         fc1_units (int): Número de nós na primeira camada oculta
+                         fc2_units (int): Número de nós na segunda camada oculta
+                 """
+                super(QNetwork, self).__init__()
+                self.seed = torch.manual_seed(seed) # define a semente aleatória manualmente
+                self.fc1 = nn.Linear(state_size, fc1_units) # camada de entrda com 128 nos
+                self.fc2 = nn.Linear(fc1_units, fc2_units) # camada oculta com 128 de entrada e 32 de saida
+                self.fc3 = nn.Linear(fc2_units, action_size) # camada de saida com acoes possiveis
 
     def forward(self, state):
-            """Build a network that maps state -> action values."""
-            x = F.relu(self.fc1(state))
-            x = F.relu(self.fc2(x))
-            return self.fc3(x)
+                """Construir uma rede que mapeia estado -> valores de ação."""
+                x = F.relu(self.fc1(state)) # funcao de ativação relu
+                x = F.relu(self.fc2(x)) # funcao de ativação relu
+                return self.fc3(x) # retorna a camada de saida

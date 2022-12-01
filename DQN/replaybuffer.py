@@ -6,23 +6,23 @@ import torch
 import torch.nn.functional as F
 import torch.optim as optim
 
-BUFFER_SIZE = int(1e5)  # replay buffer size
-BATCH_SIZE = 64         # minibatch size
+BUFFER_SIZE = int(1e5)  # tamanho do buffer de repetição
+BATCH_SIZE = 64         # tamanho do minilote
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 class ReplayBuffer:
-     """Fixed size buffer to store experience tuples."""
+     """Buffer de tamanho fixo para armazenar tuplas de experiência."""
 
      def __init__(self, action_size, buffer_size, batch_size, seed):
-          """Initialize a ReplayBuffer object.
+          """Inicializar um objeto ReplayBuffer.
 
-          parameters
+          parâmetros
           ======
-               action_size (int): dimension of each action
-               buffer_size(int): maximum buffer size
-               batch_size(int): size of each training batch
-               seed (int): random seed
+               action_size (int): dimensão de cada ação
+               buffer_size(int): tamanho máximo do buffer
+               batch_size(int): tamanho de cada lote de treinamento
+               semente (int): semente aleatória
           """
           self.action_size = action_size
           self.memory = deque(maxlen=buffer_size)  
@@ -31,12 +31,12 @@ class ReplayBuffer:
           self.seed = random.seed(seed)
      
      def add(self, state, action, reward, next_state, done):
-          """Add a new experience to memory."""
+          """Adicione uma nova experiência à memória."""
           experience = self.experience(state, action, reward, next_state, done)
           self.memory.append(experience)
      
      def sample(self):
-          """Randomly try a batch of memory experiments. """
+          """Tente aleatoriamente um lote de experimentos de memória. """
           experiences = random.sample(self.memory, k=self.batch_size)
 
           states = torch.from_numpy(np.vstack([e.state for e in experiences if e is not None])).float().to(device)
@@ -48,5 +48,5 @@ class ReplayBuffer:
           return (states, actions, rewards, next_states, dones)
 
      def __len__(self):
-          """Returns the current size of the internal memory."""
+          """Retorna o tamanho atual da memória interna."""
           return len(self.memory)
